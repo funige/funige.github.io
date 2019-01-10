@@ -62,10 +62,13 @@ body {
     background: #a3a3a3;
 }
 
+* {
+    -webkit-overflow-scrolling: touch;
+}
+
 #left-component {
     width: 200px;
 //  overflow: hidden;
-    -webkit-overflow-scrolling: touch;
 }
 #divider {
     left: 200px;       /* Same as left component initial width */
@@ -75,7 +78,6 @@ body {
     left: 200px;       /* Same as left component initial width */
     margin-left: 1px;  /* Same as divider width */
 //  overflow: hidden;
-    -webkit-overflow-scrolling: touch;
 }
 
 .side-bar {
@@ -98,6 +100,7 @@ body {
     position: absolute;
 
 //  overflow: scroll;
+    -webkit-overflow-scrolling: touch;
 
     min-width: 100%;
     min-height: 100%;
