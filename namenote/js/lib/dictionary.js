@@ -28,7 +28,7 @@ const dictionary = {
     "Save": "保存",
     "Save As ...": "名前をつけて保存 ...",
     "Save As": "名前をつけて保存",
-    "Save Snapshot As ...": "スナップショットを保存 ...",
+    "Save Snapshot As ...": "バックアップを保存 ...",
     "Edit": "編集",
     "Undo": "取り消し",
     "Redo": "やり直し",
@@ -66,6 +66,18 @@ const dictionary = {
     "Making CSNF ...": "CSNFファイルを作成中 ...",
     "Online Storage": "オンラインストレージ",
 
+    "Namenote would like access to the files in your Dropbox.": "Namenote は Dropbox にデータを保存します。<br>接続しますか？",
+    "Authenticate": "認証",
+    "Connect to Dropbox": "Dropbox に接続",
+    "Cancel": "キャンセル",
+    "Connecting ...": "接続中 ...",
+    
+    "Texts": "テキスト",
+
+    "Side Bar Position": "サイドバーの位置",
+    "Left": "左",
+    "Right": "右",
+    
     "S": "小",
     "M": "中",
     "L": "大",
@@ -106,6 +118,7 @@ const dictionary = {
     "Duplicate note name.": "同じ名前のノートがあります。",
     "Duplicate file name.": "同じ名前のファイルがあります。",
     "File not found.": "ファイルが見つかりません。",
+    "File open error.": "このファイルは開けません。",
     "Save error.": "セーブできません。",
     "Select file to import": "読み込むファイルを選択してください",
     "Compressing": "圧縮中",
@@ -130,6 +143,14 @@ const dictionary = {
     "Click OK to restore default settings.": "デフォルトの設定に戻します",
     "Pen pressure": "筆圧",
     "Output": "出力",
+
+    "Menu": "メニュー",
+    "Pen": "ペン",
+    "Eraser": "消しゴム",
+    "Text": "テキスト",
+    "Zoom In": "ズームイン",
+    "Zoom Out": "ズームアウト",
+    "Quick Zoom": "クイックズーム",
     
     "Enable Japanese Options": "日本語用のオプションを有効にする"
   }
