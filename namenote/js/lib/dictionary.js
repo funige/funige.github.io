@@ -70,7 +70,9 @@ const dictionary = {
     "Authenticate": "認証",
     "Connect to Dropbox": "Dropbox に接続",
     "Cancel": "キャンセル",
+    "Abort": "中断",
     "Connecting ...": "接続中 ...",
+    "Loading ...": "読み込み中 ...",
     "Logout": "ログアウト",
     "Disconnected.": "接続を解除しました。",
     
@@ -122,6 +124,7 @@ const dictionary = {
     "File not found.": "ファイルが見つかりません。",
     "File open error.": "このファイルは開けません。",
     "Save error.": "セーブできません。",
+    "Network error.": "ネットワークに接続できません。",
     "Select file to import": "読み込むファイルを選択してください",
     "Compressing": "圧縮中",
     "Rendering": "作成中",
