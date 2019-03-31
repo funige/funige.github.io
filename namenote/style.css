@@ -143,6 +143,9 @@ body {
 
     min-width: 100%;
     min-height: 100%;
+
+    overflow: scroll;
+    transform: translate3d(0,0,0);
 }
  
 /*
@@ -166,7 +169,6 @@ body {
     background-color: white;
 
     transform-origin: top left;
-    transform: scale(1.0);
 }
 
 .page.preload {
@@ -210,6 +212,7 @@ body {
 }
 
 .texts {
+    transform-origin: top left;
 }
 
 .text {
@@ -258,6 +261,7 @@ body {
 .canvas {
     position: absolute;
     transform-origin: top left;
+    overflow: hidden;
 }
 
 /*canvas {
@@ -651,3 +655,6 @@ span .ui-icon {
     outline-color: rgb(59, 153, 252)
 }
 
+::-webkit-scrollbar-thumb {
+    z-index: 10000;
+}
