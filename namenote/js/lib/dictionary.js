@@ -11,6 +11,7 @@ const dictionary = {
     "Tablet Settings": "筆圧調整",
     "Tablet Settings ...": "筆圧調整 ...",
     "Quit Namenote": "Namenote を終了",
+    "File Manager ...": "ファイルマネージャー ...",
     "Note": "ノート",
     "File": "ファイル",
     "Open ...": "開く ...",
@@ -65,6 +66,7 @@ const dictionary = {
     "Untitled": "名称未設定",
     "Making CSNF ...": "CSNFファイルを作成中 ...",
     "Online Storage": "オンラインストレージ",
+    "Recent Notes": "最近使用したノート",
 
     "Namenote would like access to the files in your Dropbox.": "Namenote は Dropbox にデータを保存します。<br>接続しますか？",
     "Authenticate": "認証",
@@ -123,6 +125,7 @@ const dictionary = {
     "Duplicate file name.": "同じ名前のファイルがあります。",
     "File not found.": "ファイルが見つかりません。",
     "File open error.": "このファイルは開けません。",
+    "Folder open error.": "このフォルダは開けません。",
     "Save error.": "セーブできません。",
     "Network error.": "ネットワークに接続できません。",
     "Select file to import": "読み込むファイルを選択してください",
