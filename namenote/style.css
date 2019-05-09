@@ -79,7 +79,7 @@ body {
 }
 
 .text-view {
-    background-color: #eee; //#f6f6f6;
+    background-color: white; //#eee;
 
     position: absolute;
     min-width: 100%;
@@ -129,7 +129,7 @@ body {
     min-width: 100%;
     min-height: 100%;
 
-    overflow: scroll;
+    overflow: auto; //scroll;
     transform: translate3d(0,0,0);
 }
  
@@ -492,8 +492,8 @@ span .ui-icon {
     width: 100%;
     height: 100%;
     overflow-x: hidden;
-    overflow-y: scroll;
-    background-color: orange; //#eee;
+//  overflow-y: scroll;
+    background-color: #eee;
 }
 
 .dialog .file-view {
@@ -501,9 +501,9 @@ span .ui-icon {
     background-color: #f6f6f6;
 }
 
-.ui-selectable, .ui-draggable {
+/*.ui-selectable, .ui-draggable {
     touch-action: auto;
-}
+}*/
 
 .file-view li {
     position: relative;
@@ -718,6 +718,22 @@ span .ui-icon {
     outline-color: rgb(59, 153, 252)
 }
 
+/*
 ::-webkit-scrollbar-thumb {
     z-index: 10000;
+}
+*/
+
+.sortable-drag div {
+    //outline: 1px solid #3a98fc;
+    //background-color: rgba(133,191,253,0.5);
+    opacity: 1;
+}
+
+.sortable-drag {
+    opacity: 1;
+}
+
+.sortable-ghost {
+    opacity: 0.1;
 }
