@@ -493,12 +493,16 @@ span .ui-icon {
     height: 100%;
     overflow-x: hidden;
     overflow-y: scroll;
-    background-color: pink; //#eee;
+    background-color: orange; //#eee;
 }
 
 .dialog .file-view {
     border: 1px solid #aaa;
     background-color: #f6f6f6;
+}
+
+.ui-selectable, .ui-draggable {
+    touch-action: auto;
 }
 
 .file-view li {
