@@ -494,11 +494,12 @@ span .ui-icon {
 //  overflow-y: scroll;
 }
 
-.file-view div {
-    pointer-events: none;
-}
+//.file-view div {
+//  pointer-events: none;
+//}
+
 .file-view .sort-handle {
-    pointer-events: auto;
+//  pointer-events: auto;
 //  user-select: none;
 }
 
