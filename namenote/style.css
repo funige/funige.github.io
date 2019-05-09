@@ -491,12 +491,15 @@ span .ui-icon {
     overflow-x: hidden;
 
     background-color: #eee;
-    pointer-events: none;
 //  overflow-y: scroll;
 }
 
-.file-view * {
-    user-select: none;
+.file-view div {
+    pointer-events: none;
+}
+.file-view .sort-handle {
+    pointer-events: auto;
+//  user-select: none;
 }
 
 .dialog .file-view {
