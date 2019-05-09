@@ -75,7 +75,7 @@ body {
     width: 100%;
     height:calc(100% - 29px);
     overflow: auto;
-    -webkit-overflow-scrolling: touch;
+//  -webkit-overflow-scrolling: touch;
 }
 
 .text-view {
