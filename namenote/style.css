@@ -489,8 +489,14 @@ span .ui-icon {
     width: 100%;
     height: 100%;
     overflow-x: hidden;
-//  overflow-y: scroll;
+
     background-color: #eee;
+    pointer-events: none;
+//  overflow-y: scroll;
+}
+
+.file-view * {
+    user-select: none;
 }
 
 .dialog .file-view {
