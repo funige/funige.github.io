@@ -93,7 +93,8 @@ const dictionary = {
 
     "New notebook": "新規ノート",
     "Notebook name": "ノート名",
-    "Folder": "保存先",
+//  "Folder": "保存先",
+    "Location": "場所",
     "Choose folder...": "参照...",
     "Number of pages": "ページ数",
     "Template": "テンプレート",
@@ -128,6 +129,8 @@ const dictionary = {
     "Folder open error.": "このフォルダは開けません。",
     "Save error.": "セーブできません。",
     "Network error.": "ネットワークに接続できません。",
+    "Too many files in this folder.": "ファイルが多すぎます。",
+    
     "Select file to import": "読み込むファイルを選択してください",
     "Compressing": "圧縮中",
     "Rendering": "作成中",

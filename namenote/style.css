@@ -78,38 +78,12 @@ body {
     -webkit-overflow-scrolling: touch;
 }
 
-.file-view {
-}
-
-/*
-.file-view select {
-//  border: 1px solid #aaa;
-}
-.file-view select option {
-    font-size: 13px;
-    padding: 5px;
-}
-*/
-
-.page-view {
-    background-color: #f6f6f6;
-//  font-size: 14px;
-
-    width: 2000px;
-    height: 2000px;
-
-//  user-select: text;
-}
-
 .text-view {
-    background-color: #f6f6f6;
-//  font-size: 14px;
+    background-color: #eee; //#f6f6f6;
 
     position: absolute;
     min-width: 100%;
     min-height: 100%;
-
-//  user-select: text;
 }
 
 /**
@@ -150,8 +124,6 @@ body {
 }
 
 .main-view {
-//  font-size: 14px;
-    
     position: absolute;
 
     min-width: 100%;
@@ -161,19 +133,6 @@ body {
     transform: translate3d(0,0,0);
 }
  
-/*
-.view {
-    position: absolute;
-}
-
-.view-frame {
-    position: absolute;
-//  border: 1px solid blue;
-    border-bottom: 1px solid rgba(0,0,0,0.01)
-    pointer-events: none;
-}
-*/
-
 .page {
     position: absolute;
     box-shadow: 3px 3px 5px 2px rgba(0,0,0,0.1);
@@ -215,12 +174,6 @@ body {
     opacity: 1.0
 }
 
-/*
-.project {
-    -webkit-font-smoothing: subpixel-antialiased;
-    font-smoothing: subpixel-antialiased;
-}*/
-
 .project {
     position: absolute;
 }
@@ -230,7 +183,6 @@ body {
 }
 
 .text {
-//  position: absolute;
     min-width: 1em;
     min-height: 1em;
     white-space: nowrap;
@@ -277,11 +229,6 @@ body {
     transform-origin: top left;
     overflow: hidden;
 }
-
-/*canvas {
-    position: absolute;
-//  imageRendering: pixelated;
-}*/
 
 canvas .scratch {
     z-index :100;
@@ -392,14 +339,6 @@ form .preview { width: 500px; height: 150px; } /* 350px */
     vertical-align: middle;
 }
 
-/* 
-   May break html menu, but seems good so far..
-.ui-button {
-    min-height: 36px;
-    vertical-align: middle;
-}
-*/
-
 button.ui-button.ui-widget {
     min-height: 36px;
 }
@@ -424,43 +363,8 @@ button.ui-button.ui-widget {
     visibility: hidden;
 }
 
-.folders {
-}
-
-.files {
-    width: 100%;
-    height: calc(100% - 40px);
-    overflow: scroll;
-    border: 1px solid #aaa;
-    background-color: white;
-}
-
-.files li span {
-    min-width: 16px;
-    margin-right: 5px;
-}
-
-.files li {
-    font-size: 13px;
-    padding: 1px 13px 3px 13px; //3px 13px 3px 26px;
-    height: 21px;
-    border: none;
-}
-
-.files li.ui-selected,.files li.ui-selecting {
-    color: white;
-    background-color: #297efd;
-}
-
-.files li.disabled {
-    opacity: 0.3;
-}
-
 .ui-widget-overlay {
     opacity: 0.01 !important;
-//  opacity: 0.5 !important;
-//  filter: Alpha(Opacity=50) !important;
-//  background-color: black !important;
 }
 
 .ui-draggable, .ui-droppable {
@@ -514,16 +418,6 @@ span .ui-icon {
 .ui-menu div.label { text-align:left; float: left; }
 .ui-menu div.key   { text-align: right; margin-right: -8px; font-size: 13px; }
 
-/*
-.ui-menu-item > .ui-state-active {
-    background-color: #e8eaed !important;
-    color: black !important;
-    border: 1px solid rgba(0,0,0,0.05) !important;
-    border-left: 1px solid rgba(0,0,0,0.2) !important;
-    border-right: 1px solid rgba(0,0,0,0.2) !important;
-}
-*/
-
 #menu {
     background-color: #f6f6f6;
 }
@@ -556,6 +450,111 @@ span .ui-icon {
     height: 4px;
     border: 1px solid black;
     background-color: white;
+}
+
+.folders {
+}
+
+.file-list {
+    width: 100%;
+    height: calc(100% - 40px);
+    overflow: scroll;
+    border: 1px solid #aaa;
+    background-color: white;
+}
+
+.file-list li span {
+    min-width: 16px;
+    margin-right: 5px;
+}
+
+.file-list li {
+    font-size: 13px;
+    padding: 1px 13px 3px 13px; //3px 13px 3px 26px;
+    height: 21px;
+    border: none;
+}
+
+.file-list li.ui-selected,.file-list li.ui-selecting {
+    color: white;
+    background-color: #297efd;
+}
+
+.file-list li.disabled {
+    opacity: 0.3;
+}
+
+/**
+ * FileView
+ */
+
+.file-view {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: #eee;
+}
+
+.dialog .file-view {
+    border: 1px solid #aaa;
+    background-color: #f6f6f6;
+}
+
+.file-view li {
+    position: relative;
+//  height: 80px; //21px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+//  overflow: hidden;
+
+}
+
+.file-view li img {
+    margin: 5px;
+    border: 1px solid #aaa;
+    background-color: white;
+}
+
+.file-view li div {
+    position: absolute;
+    top: 0;
+//  left: 80px;
+//  margin-right: 80px;
+}
+
+.file-view li.ui-selected,.file-view li.ui-selecting {
+    color: white;
+    background-color: #297efd;
+}
+
+.file-view li.disabled {
+    opacity: 0.3;
+}
+
+.file-view li.placeholder {
+    background-color: #eee;
+    border-bottom: 1px solid #ccc;
+}
+
+/*.file-view li div.sort-handle {
+    position: absolute;
+    margin-right: 0;
+    left: auto;
+    right: 0px;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+}*/
+
+.file-view li div.digest {
+    width: 100%;
+    height: 100%;
+}
+
+.ui-selectable-helper {
+    display: none;
 }
 
 /**
