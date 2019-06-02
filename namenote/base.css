@@ -122,7 +122,7 @@ body {
   height: 100%;
   min-height: 100%;
   overflow: auto;
-  font-family: verdana;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 13px;
   position: fixed;
   line-height: 1.5;
@@ -151,13 +151,6 @@ ul, li {
   -ms-user-select: none;
   user-select: none;
   text-align: center;
-}
-
-.text-view {
-  background-color: white;
-  position: absolute;
-  min-width: 100%;
-  min-height: 100%;
 }
 
 /**
@@ -233,12 +226,23 @@ ul, li {
   outline: 3px solid #85bffd;
 }
 
+.page .marks {
+  position: absolute;
+  -webkit-transform-origin: top left;
+  -ms-transform-origin: top left;
+  transform-origin: top left;
+}
+
 .page-mask {
   position: absolute;
   overflow: hidden;
 }
 
 .page-root {
+  position: absolute;
+}
+
+.frame {
   position: absolute;
 }
 
@@ -417,6 +421,10 @@ button.ui-button.ui-widget {
   width: 200px;
 }
 
+li.ui-state-disabled {
+  border-top: 1px solid #aaa;
+}
+
 #file-dropdown .ui-menu {
   width: 320px !important;
 }
@@ -496,13 +504,43 @@ span .ui-icon {
 }
 
 /**
+ * TextView
+ */
+.text-view {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: #f6f6f6;
+}
+
+.text-view .content {
+  height: calc(100% - 27px);
+  width: 100%;
+  overflow: scroll;
+}
+
+.text-view .content ul {
+  position: relative;
+  background-color: #f6f6f6;
+  border-bottom: 1px solid black;
+  padding-bottom: 1em;
+  margin-left: 30px;
+}
+
+.text-view li {
+  position: relative;
+  border-bottom: 1px solid #999;
+  background-color: white;
+}
+
+/**
  * PageView
  */
 .page-view {
   width: 100%;
   height: 100%;
-  overflow-x: hidden;
-  background-color: #eee;
+  background-color: #f6f6f6;
 }
 
 .dialog .page-view {
@@ -512,6 +550,7 @@ span .ui-icon {
 
 .page-view li {
   position: relative;
+  display: table;
   width: 100%;
   border: none;
   border-bottom: 1px solid #ccc;
@@ -526,11 +565,6 @@ span .ui-icon {
   pointer-events: none;
 }
 
-.page-view li div {
-  position: absolute;
-  top: 0;
-}
-
 .page-view li.ui-selected, .page-view li.ui-selecting {
   color: white;
   background-color: #297efd;
@@ -541,7 +575,7 @@ span .ui-icon {
 }
 
 .page-view li.placeholder {
-  background-color: #white;
+  background-color: white;
   border-bottom: 1px solid #ccc;
 }
 
@@ -549,6 +583,30 @@ span .ui-icon {
   height: calc(100% - 27px);
   width: 100%;
   overflow: scroll;
+  overflow-x: hidden;
+}
+
+.page-view .index {
+  display: table-cell;
+  vertical-align: middle;
+  width: 22px;
+  height: 100%;
+  border-right: 1px solid #ccc;
+  overflow-x: hidden;
+  font-size: 12px;
+}
+
+.page-view .digest {
+  display: table-cell;
+  white-space: nowrap;
+  bottom: 0;
+  left: 0px;
+}
+
+.page-view .sort-handle {
+  position: absolute;
+  top: 30px;
+  left: 30px;
 }
 
 .text-button {
@@ -769,6 +827,10 @@ span .ui-icon {
   border-bottom: 1px solid #aaa;
 }
 
+li.border-top {
+  font-size: 10px;
+}
+
 .tablet-settings {
   position: relative;
   left: 40px;
@@ -807,6 +869,15 @@ form td:first-child {
 form input {
   padding: 2px;
   border: 1px solid #ccc;
+  margin-right: 10px;
+}
+
+form input.filename {
+  font-size: 14px;
+  padding-left: 5px;
+  height: 26px;
+  width: 200px;
+  margin-bottom: 5px;
 }
 
 form input[type=button] {
@@ -823,8 +894,7 @@ form input[type=radio] {
   margin-right: 5px;
 }
 
-form label,
-form input {
+form label {
   margin-right: 10px;
 }
 
@@ -881,30 +951,13 @@ form .preview {
 }
 
 /* 350px */
-#sidebar-header {
-  width: 100%;
-  height: 28px;
-  line-height: 28px;
-  border-bottom: 1px solid #aaa;
-  background-color: #f6f6f6;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-size: 0px;
-}
-
-#sidebar-dropdown {
-  width: 200px;
-}
-
-#sidebar-menu .ui-menu-item, #sidebar-menu .ui-widget-content {
-  background-color: #f6f6f6 !important;
-}
-
-#sidebar-container {
+.dock-container {
   position: absolute;
   width: 100%;
-  height: calc(100% - 29px);
+  height: calc(100% - 27px);
   overflow: auto;
+}
+
+#dock-dropdown {
+  width: 200px;
 }
