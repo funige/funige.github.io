@@ -136,7 +136,7 @@ ul, li {
   outline-color: #3b99fc;
 }
 
-a {
+* {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-touch-callout: none;
 }
