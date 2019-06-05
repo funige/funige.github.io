@@ -132,7 +132,8 @@ ul, li {
   list-style: none;
 }
 
-ul, li {
+* {
+  color: green;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-touch-callout: none;
 }
