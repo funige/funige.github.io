@@ -185,12 +185,10 @@ ul, li {
   /* Same as left component initial width */
   margin-left: 1px;
   /* Same as divider width */
-  overflow: hidden;
 }
 
 #left-component {
   width: 200px;
-  overflow: hidden;
 }
 
 .sidebar {
