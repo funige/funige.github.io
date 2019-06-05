@@ -173,6 +173,10 @@ ul, li {
   background: #a3a3a3;
 }
 
+.split-pane-componennt {
+  overflow: hidden;
+}
+
 .split-pane-divider {
   left: 200px;
   /* Same as left component initial width */
@@ -203,7 +207,7 @@ ul, li {
   overflow: auto;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-  background-color: red;
+  color: yellow;
 }
 
 .page {
