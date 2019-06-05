@@ -136,6 +136,11 @@ ul, li {
   outline-color: #3b99fc;
 }
 
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+}
+
 /**
  * ToolBar
  */
@@ -426,7 +431,7 @@ li.ui-state-disabled {
 }
 
 #file-dropdown .ui-menu {
-  width: 320px !important;
+  width: 275px !important;
 }
 
 span .ui-icon {
@@ -448,7 +453,7 @@ span .ui-icon {
   border: 1px solid #aaa;
   -webkit-box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.2);
-  width: 320px;
+  width: 275px;
 }
 
 .ui-menu-item-wrapper {
@@ -480,6 +485,8 @@ span .ui-icon {
   width: 100%;
   border: 1px solid #aaa;
   overflow: auto;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .file-list li span {
@@ -708,6 +715,20 @@ span .ui-icon {
   color: #ccc;
   width: 1px;
   height: 32px;
+}
+
+.toggle-button {
+  height: 24px;
+  width: 24px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #f6f6f6;
+  display: inline-block;
+  text-align: center;
+}
+
+.toggle-button:hover, .toggle-button:active {
+  background-color: #ededed;
 }
 
 .sortable-drag div {
