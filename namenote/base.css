@@ -185,10 +185,12 @@ ul, li {
   /* Same as left component initial width */
   margin-left: 1px;
   /* Same as divider width */
+  overflow: hidden;
 }
 
 #left-component {
   width: 200px;
+  overflow: hidden;
 }
 
 .sidebar {
@@ -198,12 +200,12 @@ ul, li {
 
 .main-view {
   position: absolute;
-  min-width: 100vw;
-  min-height: 100vw;
+  min-width: 100%;
+  min-height: 100%;
   overflow: auto;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-  background-color: yellow;
+  background-color: red;
 }
 
 .page {
