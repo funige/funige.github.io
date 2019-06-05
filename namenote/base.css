@@ -132,14 +132,13 @@ ul, li {
   list-style: none;
 }
 
-:focus {
-  outline-color: #3b99fc;
-}
-
-* {
-  color: red;
+ul, li {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-touch-callout: none;
+}
+
+:focus {
+  outline-color: #3b99fc;
 }
 
 /**
