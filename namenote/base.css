@@ -198,11 +198,12 @@ ul, li {
 
 .main-view {
   position: absolute;
-  min-width: 100%;
-  min-height: 100%;
+  min-width: 100vw;
+  min-height: 100vw;
   overflow: auto;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
+  background-color: yellow;
 }
 
 .page {
