@@ -290,7 +290,6 @@ ul, li {
 input,
 textarea,
 [contenteditable] {
-  background-color: yellow;
   -webkit-user-select: text;
   -moz-user-select: text;
   -ms-user-select: text;
@@ -892,7 +891,7 @@ form .preview {
   height: calc(100% - 27px);
   min-width: 100%;
   min-height: 1em;
-  overflow: scroll;
+  overflow: hidden;
 }
 
 .text-view .content > li {
