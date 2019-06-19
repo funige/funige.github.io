@@ -194,6 +194,7 @@ ul, li {
 .sidebar {
   min-width: 100%;
   min-height: 100%;
+  background-color: #f6f6f6;
 }
 
 .main-view {
@@ -203,7 +204,6 @@ ul, li {
   overflow: auto;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-  color: red;
 }
 
 .page {
@@ -228,7 +228,8 @@ ul, li {
 
 .page.selected {
   z-index: 1;
-  outline: 3px solid #85bffd;
+  outline: 2px solid #85bffd;
+  outline-offset: 2px;
 }
 
 .page .marks {
@@ -510,111 +511,6 @@ span .ui-icon {
   opacity: 0.3;
 }
 
-/**
- * TextView
- */
-.text-view {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: #f6f6f6;
-}
-
-.text-view .content {
-  height: calc(100% - 27px);
-  width: 100%;
-  overflow: scroll;
-}
-
-.text-view .content ul {
-  position: relative;
-  background-color: #f6f6f6;
-  border-bottom: 1px solid black;
-  padding-bottom: 1em;
-  margin-left: 30px;
-}
-
-.text-view li {
-  position: relative;
-  border-bottom: 1px solid #999;
-  background-color: white;
-}
-
-/**
- * PageView
- */
-.page-view {
-  width: 100%;
-  height: 100%;
-  background-color: #f6f6f6;
-}
-
-.dialog .page-view {
-  border: 1px solid #aaa;
-  background-color: white;
-}
-
-.page-view li {
-  position: relative;
-  display: table;
-  width: 100%;
-  border: none;
-  border-bottom: 1px solid #ccc;
-  overflow: hidden;
-  background-color: #eee;
-}
-
-.page-view li img.thumbnail {
-  margin: 5px;
-  border: 1px solid #555;
-  background-color: white;
-  pointer-events: none;
-}
-
-.page-view li.ui-selected, .page-view li.ui-selecting {
-  color: white;
-  background-color: #297efd;
-}
-
-.page-view li.disabled {
-  opacity: 0.3;
-}
-
-.page-view li.placeholder {
-  background-color: white;
-  border-bottom: 1px solid #ccc;
-}
-
-.page-view .content {
-  height: calc(100% - 27px);
-  width: 100%;
-  overflow: scroll;
-  overflow-x: hidden;
-}
-
-.page-view .index {
-  display: table-cell;
-  vertical-align: middle;
-  width: 22px;
-  height: 100%;
-  border-right: 1px solid #ccc;
-  overflow-x: hidden;
-  font-size: 12px;
-}
-
-.page-view .digest {
-  display: table-cell;
-  white-space: nowrap;
-  bottom: 0;
-  left: 0px;
-}
-
-.page-view .sort-handle {
-  position: absolute;
-  top: 30px;
-  left: 30px;
-}
-
 .text-button {
   padding: 0px 10px 0 10px;
   font-size: 12px;
@@ -813,7 +709,6 @@ span .ui-icon {
   width: 100%;
   height: 26px;
   line-height: 26px;
-  background-color: #f6f6f6;
   text-align: center;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -980,4 +875,169 @@ form .preview {
 
 #dock-dropdown {
   width: 200px;
+}
+
+/**
+ * TextView
+ */
+.text-view {
+  width: 100%;
+  height: 100%;
+}
+
+.text-view .content {
+  height: calc(100% - 27px);
+  min-width: 100%;
+  min-height: 1em;
+  overflow: scroll;
+}
+
+.text-view .content > li {
+  display: table;
+  table-layout: auto;
+  min-width: 100%;
+}
+
+.text-view .content > li.selected {
+  background-color: #b9cdf8;
+}
+
+.text-view .content > li > div.count {
+  display: table-cell;
+  vertical-align: top;
+  text-align: center;
+  min-width: 16px;
+  width: 16px;
+  height: 100%;
+  border-right: 1px solid #9e9e9e;
+  border-bottom: 1px solid #9e9e9e;
+  overflow-x: hidden;
+  font-size: 12px;
+  padding-top: 4px;
+}
+
+.text-view .content > li > ul {
+  display: table-cell;
+  border-bottom: 1px solid #9e9e9e;
+  background-color: #f6f6f6;
+}
+
+.text-view .content > li > ul > li {
+  background-color: white;
+}
+
+.text-view .content > li > ul > li:not(:last-child) {
+  border-bottom: 1px dotted #9e9e9e;
+}
+
+.text-view .content > li > ul > li > div.sort-handle {
+  display: table-cell;
+  vertical-align: middle;
+  color: #eee;
+  width: 16px;
+  height: 100%;
+}
+
+.text-view .content > li > ul > li > div.dock-text {
+  display: table-cell;
+  white-space: nowrap;
+  min-width: 100%;
+  color: #000;
+  padding: 5px 20px 5px 10px;
+}
+
+/**
+ * PageView
+ */
+.page-view {
+  width: 100%;
+  height: 100%;
+}
+
+.page-view .content {
+  height: calc(100% - 27px);
+  text-align: center;
+  width: 100%;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.page-view .content > li {
+  position: relative;
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #9e9e9e;
+  overflow: hidden;
+}
+
+.page-view .content > li.selected {
+  background-color: #b9cdf8;
+}
+
+.page-view .content > li.disabled {
+  opacity: 0.3;
+}
+
+.page-view .content > li > div.count {
+  position: absolute;
+  width: 16px;
+  text-align: center;
+  left: 0;
+  top: 4px;
+}
+
+.page-view .content > li > div.sort-handle {
+  display: table-cell;
+  vertical-align: middle;
+  color: #eee;
+  width: 16px;
+  height: 100%;
+}
+
+.page-view .content > li .thumbnail {
+  display: table-cell;
+  vertical-align: middle;
+  pointer-events: none;
+}
+
+.page-view .content > li .thumbnail img {
+  border: 1px solid #555;
+  background-color: white;
+  margin: 4px 4px 0px 0px;
+}
+
+.page-view .content > li .digest {
+  display: table-cell;
+  vertical-align: bottom;
+  text-align: left;
+  white-space: nowrap;
+  opacity: 0.5;
+  padding-bottom: 4px;
+}
+
+.dialog .page-view {
+  border: 1px solid #9e9e9e;
+  background-color: white;
+}
+
+/**
+ * NoteView
+ */
+.note-view {
+  width: 100%;
+  height: 100%;
+  background-color: #f6f6f6;
+}
+
+.note-view .content {
+  height: calc(100% - 27px);
+  width: 100%;
+  overflow: scroll;
+}
+
+.note-view .content > li {
+  border-bottom: 1px solid #ccc;
+  overflow: hidden;
 }
