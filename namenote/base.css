@@ -290,7 +290,6 @@ ul, li {
 input,
 textarea,
 [contenteditable] {
-  background-color: #fce;
   -webkit-user-select: text;
   -moz-user-select: text;
   -ms-user-select: text;
