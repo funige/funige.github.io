@@ -287,11 +287,14 @@ ul, li {
   transform-origin: top left;
 }
 
-.text * {
-  -webkit-user-select: element;
-  -moz-user-select: element;
-  -ms-user-select: element;
-  user-select: element;
+input,
+textarea,
+[contenteditable] {
+  background-color: yellow;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
 }
 
 .text.selected {
