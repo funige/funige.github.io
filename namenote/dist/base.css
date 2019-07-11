@@ -951,7 +951,7 @@ form .preview {
 }
 
 .text-view .content > li.selected {
-  background-color: #b9cdf8;
+  background-color: #b0ddf8;
 }
 
 .text-view .content > li > div.count {
@@ -990,6 +990,10 @@ form .preview {
   height: 100%;
 }
 
+.text-view .content > li > ul > li > div.sort-handle.selected {
+  background-color: #f5f8fa;
+}
+
 .text-view .content > li > ul > li > div.dock-text {
   display: table-cell;
   white-space: nowrap;
@@ -999,7 +1003,7 @@ form .preview {
 }
 
 .text-view .content > li > ul > li > div.dock-text.selected {
-  background-color: #f8f8f8;
+  background-color: #f5f8fa;
 }
 
 /**
@@ -1029,7 +1033,7 @@ form .preview {
 }
 
 .page-view .content > li.selected {
-  background-color: #b9cdf8;
+  background-color: #b0ddf8;
 }
 
 .page-view .content > li.disabled {
