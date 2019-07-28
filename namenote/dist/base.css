@@ -198,102 +198,6 @@ ul, li {
   background-color: #f6f6f6;
 }
 
-.main-view {
-  position: absolute;
-  min-width: 100%;
-  min-height: 100%;
-  overflow: auto;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-
-.main-view .page {
-  position: absolute;
-  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.3), 3px 3px 5px 2px rgba(0, 0, 0, 0.1);
-  z-index: 0;
-  background-color: white;
-  -webkit-transform-origin: top left;
-  transform-origin: top left;
-  overflow: hidden;
-}
-
-.main-view .page.preload {
-  box-shadow: none;
-  outline: none;
-  opacity: 0.3;
-}
-
-.main-view .page.selected {
-  z-index: 1;
-  outline: 3px solid #85bffd;
-  outline-offset: 1px;
-}
-
-.main-view .page .marks {
-  position: absolute;
-  -webkit-transform-origin: top left;
-  transform-origin: top left;
-}
-
-.main-view canvas.scratch {
-  position: absolute;
-  overflow: hidden;
-  pointer-events: none;
-  z-index: 10;
-}
-
-.main-view .multipage-content {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  overflow: scroll;
-}
-
-.main-view .multipage-content + canvas.scratch {
-  width: 100%;
-  height: 100%;
-}
-
-.main-view .singlepage-content {
-  width: calc(100% - 18px);
-  height: calc(100% - 18px);
-  position: absolute;
-  overflow: hidden;
-}
-
-.main-view .singlepage-content + canvas.scratch {
-  width: calc(100% - 18px);
-  height: calc(100% - 18px);
-}
-
-.main-view .right-scroll-bar {
-  width: 18px;
-  height: calc(100% - 18px);
-  position: absolute;
-  background-color: #eee;
-  right: 0;
-  overflow: hidden;
-}
-
-.main-view .bottom-scroll-bar {
-  width: calc(100% - 18px);
-  height: 18px;
-  position: absolute;
-  background-color: #eee;
-  bottom: 0;
-  overflow: hidden;
-}
-
-.main-view .corner-box {
-  width: 18px;
-  height: 18px;
-  position: absolute;
-  background-color: #f6f6f6;
-  right: 0;
-  bottom: 0;
-  overflow: hidden;
-}
-
 .page-mask {
   position: absolute;
   overflow: hidden;
@@ -517,7 +421,8 @@ span .ui-icon {
 
 .ui-menu div.check {
   position: absolute;
-  left: 5px;
+  left: 0px;
+  top: 12px;
 }
 
 .ui-menu div.label {
@@ -929,6 +834,123 @@ form .preview {
 }
 
 /**
+ * MainView
+ */
+.main-view {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  overflow: auto;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.main-view .page {
+  position: absolute;
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.3), 3px 3px 5px 2px rgba(0, 0, 0, 0.1);
+  z-index: 0;
+  background-color: white;
+  -webkit-transform-origin: top left;
+  transform-origin: top left;
+  overflow: hidden;
+}
+
+.main-view .page.preload {
+  box-shadow: none;
+  outline: none;
+  opacity: 0.3;
+}
+
+.main-view .page.selected {
+  z-index: 1;
+  outline: 3px solid #85bffd;
+  outline-offset: 1px;
+}
+
+.main-view .page .marks {
+  position: absolute;
+  -webkit-transform-origin: top left;
+  transform-origin: top left;
+}
+
+.main-view canvas.drawing-layer {
+  position: absolute;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.main-view .multipage-content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: scroll;
+}
+
+.main-view .multipage-content + canvas.drawing-layer {
+  width: 100%;
+  height: 100%;
+}
+
+.main-view .singlepage-content {
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  position: absolute;
+  overflow: hidden;
+}
+
+.main-view .singlepage-content + canvas.drawing-layer {
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+}
+
+.main-view .right-scroll-bar {
+  width: 12px;
+  height: calc(100% - 12px);
+  position: absolute;
+  background-color: #eee;
+  right: 0;
+  overflow: hidden;
+}
+
+.main-view .right-scroll-bar .slider {
+  width: calc(100% - 4px);
+  left: 2px;
+  height: 50px;
+}
+
+.main-view .slider {
+  background-color: #888;
+  position: absolute;
+  border-radius: 10px;
+}
+
+.main-view .bottom-scroll-bar {
+  width: calc(100% - 12px);
+  height: 12px;
+  position: absolute;
+  background-color: #eee;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.main-view .bottom-scroll-bar .slider {
+  width: 50px;
+  height: calc(100% - 4px);
+  top: 2px;
+}
+
+.main-view .corner-scroll-bar {
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  background-color: #f6f6f6;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+/**
  * TextView
  */
 .text-view {
@@ -942,12 +964,14 @@ form .preview {
   min-height: 1em;
   overflow: scroll;
   overflow-x: hidden;
+  background-color: #ccc;
 }
 
 .text-view .content > li {
   display: table;
   table-layout: auto;
   min-width: 100%;
+  background-color: #f6f6f6;
 }
 
 .text-view .content > li.selected {
@@ -1020,6 +1044,7 @@ form .preview {
   width: 100%;
   overflow: scroll;
   overflow-x: hidden;
+  background-color: #ccc;
 }
 
 .page-view .content > li {
@@ -1027,9 +1052,11 @@ form .preview {
   display: table;
   table-layout: fixed;
   width: 100%;
+  height: 10px;
   border: none;
   border-bottom: 1px solid #9e9e9e;
   overflow: hidden;
+  background-color: #f6f6f6;
 }
 
 .page-view .content > li.selected {
@@ -1040,7 +1067,7 @@ form .preview {
   opacity: 0.3;
 }
 
-.page-view .content > li > div.count {
+.page-view .content > li > .count {
   position: absolute;
   width: 16px;
   text-align: center;
@@ -1048,7 +1075,7 @@ form .preview {
   top: 4px;
 }
 
-.page-view .content > li > div.sort-handle {
+.page-view .content > li > .sort-handle {
   display: table-cell;
   vertical-align: middle;
   color: #eee;
@@ -1063,9 +1090,14 @@ form .preview {
 }
 
 .page-view .content > li .thumbnail img {
+  position: relative;
+  display: block;
   border: 1px solid #555;
   background-color: white;
-  margin: 4px 4px 0px 0px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  margin-right: 0px;
+  margin-left: 0;
 }
 
 .page-view .content > li .digest {
@@ -1088,16 +1120,86 @@ form .preview {
 .note-view {
   width: 100%;
   height: 100%;
-  background-color: #f6f6f6;
 }
 
 .note-view .content {
   height: calc(100% - 27px);
+  text-align: center;
   width: 100%;
   overflow: scroll;
+  overflow-x: hidden;
+  background-color: #ccc;
 }
 
 .note-view .content > li {
-  border-bottom: 1px solid #ccc;
+  position: relative;
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  height: 10px;
+  border: none;
+  border-bottom: 1px solid #9e9e9e;
   overflow: hidden;
+  background-color: #f6f6f6;
+}
+
+.note-view .content > li.selected {
+  background-color: #b0ddf8;
+}
+
+.note-view .content > li.disalbe {
+  opacity: 0.3;
+}
+
+.note-view .content > li > .sort-handle {
+  display: table-cell;
+  vertical-align: middle;
+  color: #eee;
+  width: 16px;
+  height: 100%;
+}
+
+.note-view .content > li .thumbnail {
+  display: table-cell;
+  vertical-align: middle;
+  pointer-events: none;
+}
+
+.note-view .content > li .thumbnail img {
+  position: relative;
+  display: block;
+  border: 1px solid #555;
+  background-color: white;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  margin-right: 0px;
+  margin-left: 0;
+}
+
+.note-view .content > li .info {
+  display: table-cell;
+  vertical-align: bottom;
+  text-align: left;
+  white-space: nowrap;
+  padding-bottom: 4px;
+}
+
+.note-view .content > li .info .info-title {
+  position: absolute;
+  top: 4px;
+}
+
+.note-view .content > li .info .info-detail {
+  position: absolute;
+  bottom: 4px;
+  opacity: 0.5;
+}
+
+.note-view .content > li .digest {
+  display: table-cell;
+  vertical-align: bottom;
+  text-align: left;
+  white-space: nowrap;
+  opacity: 0.5;
+  padding-bottom: 4px;
 }
