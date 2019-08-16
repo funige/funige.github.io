@@ -864,7 +864,6 @@ form .preview {
   overflow: auto;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-  background-color: yellow;
 }
 
 .main-view .page {
