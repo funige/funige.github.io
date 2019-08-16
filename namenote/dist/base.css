@@ -362,6 +362,10 @@ button.ui-button.ui-widget {
   width: calc(100% - 15px);
 }
 
+.ui-dialog-buttonset .message {
+  margin-top: 10px;
+}
+
 .ui-dialog-buttonpane button {
   float: right;
 }
@@ -508,6 +512,18 @@ span .ui-icon {
   z-index: 3000;
   opacity: 0.8;
   pointer-events: none;
+}
+
+#save-indicator img {
+  display: inline-block;
+  height: 30px;
+  vertical-align: bottom;
+}
+
+#save-indicator div {
+  display: inline-block;
+  color: #297efd;
+  vertical-align: bottom;
 }
 
 /**
@@ -751,6 +767,14 @@ form input.filename {
   margin-bottom: 5px;
 }
 
+form input.count {
+  font-size: 14px;
+  padding-left: 5px;
+  height: 26px;
+  margin-bottom: 5px;
+  width: 30px;
+}
+
 form input[type=button] {
   font-size: 12px;
   border-radius: 2px;
@@ -766,7 +790,8 @@ form input[type=radio] {
 }
 
 form label {
-  margin-right: 10px;
+  margin-right: 5px;
+  margin-bottom: 5px;
 }
 
 form .name {
@@ -799,10 +824,6 @@ form .key {
 
 form .regexp {
   width: 100px;
-}
-
-form .count {
-  width: 30px;
 }
 
 form .count2 {
@@ -893,20 +914,20 @@ form .preview {
 }
 
 .main-view .singlepage-content {
-  width: calc(100% - 12px);
-  height: calc(100% - 12px);
+  width: calc(100% - 15px);
+  height: calc(100% - 15px);
   position: absolute;
   overflow: hidden;
 }
 
 .main-view .singlepage-content + canvas.drawing-layer {
-  width: calc(100% - 12px);
-  height: calc(100% - 12px);
+  width: calc(100% - 15px);
+  height: calc(100% - 15px);
 }
 
 .main-view .right-scroll-bar {
-  width: 12px;
-  height: calc(100% - 12px);
+  width: 15px;
+  height: calc(100% - 15px);
   position: absolute;
   background-color: #eee;
   right: 0;
@@ -926,8 +947,8 @@ form .preview {
 }
 
 .main-view .bottom-scroll-bar {
-  width: calc(100% - 12px);
-  height: 12px;
+  width: calc(100% - 15px);
+  height: 15px;
   position: absolute;
   background-color: #eee;
   bottom: 0;
@@ -941,8 +962,8 @@ form .preview {
 }
 
 .main-view .corner-scroll-bar {
-  width: 12px;
-  height: 12px;
+  width: 15px;
+  height: 15px;
   position: absolute;
   background-color: #f6f6f6;
   right: 0;

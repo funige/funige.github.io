@@ -70,6 +70,7 @@ const dictionary = {
     "Clear Recent Note List": "最近使用したノートのリストを消去",
     "Untitled": "名称未設定",
     "Making CSNF ...": "CSNFファイルを作成中 ...",
+    "Making PDF ...": "PDFファイルを作成中 ...",
     "Online Storage": "オンラインストレージ",
     "Recent Notes": "最近使用したノート",
 
