@@ -259,11 +259,13 @@ textarea,
   user-select: text;
 }
 
-.main-view [contenteditable] {
-  -webkit-user-select: element;
-  -moz-user-select: element;
-  -ms-user-select: element;
-  user-select: element;
+input.main-view,
+textarea.main-view,
+[contenteditable].main-view {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .text.selected {
