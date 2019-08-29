@@ -250,25 +250,14 @@ ul, li {
   transform-origin: top left;
 }
 
+/*
 input,
 textarea,
 [contenteditable] {
-  background-color: #fce;
-  -webkit-user-select: text;
-  -moz-user-select: text;
-  -ms-user-select: text;
-  user-select: text;
+    background-color: #fce;
+    user-select: text;
 }
-
-input.main-view,
-textarea.main-view,
-[contenteditable].main-view {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
+*/
 .text.selected {
   border: none;
   outline: 1px solid #3a98fc;
