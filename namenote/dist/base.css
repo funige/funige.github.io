@@ -259,6 +259,13 @@ textarea,
   user-select: text;
 }
 
+.main-view [contenteditable] {
+  -webkit-user-select: element;
+  -moz-user-select: element;
+  -ms-user-select: element;
+  user-select: element;
+}
+
 .text.selected {
   border: none;
   outline: 1px solid #3a98fc;
@@ -937,20 +944,20 @@ form .preview {
 }
 
 .main-view .singlepage-content {
-  width: calc(100% - 15px);
-  height: calc(100% - 15px);
+  width: calc(100% - 18px);
+  height: calc(100% - 18px);
   position: absolute;
   overflow: hidden;
 }
 
 .main-view .singlepage-content + canvas.drawing-layer {
-  width: calc(100% - 15px);
-  height: calc(100% - 15px);
+  width: calc(100% - 18px);
+  height: calc(100% - 18px);
 }
 
 .main-view .right-scroll-bar {
-  width: 15px;
-  height: calc(100% - 15px);
+  width: 18px;
+  height: calc(100% - 18px);
   position: absolute;
   background-color: #eee;
   right: 0;
@@ -966,12 +973,12 @@ form .preview {
 .main-view .slider {
   background-color: #888;
   position: absolute;
-  border-radius: 10px;
+  border-radius: 3px;
 }
 
 .main-view .bottom-scroll-bar {
-  width: calc(100% - 15px);
-  height: 15px;
+  width: calc(100% - 18px);
+  height: 18px;
   position: absolute;
   background-color: #eee;
   bottom: 0;
@@ -985,8 +992,8 @@ form .preview {
 }
 
 .main-view .corner-scroll-bar {
-  width: 15px;
-  height: 15px;
+  width: 18px;
+  height: 18px;
   position: absolute;
   background-color: #f6f6f6;
   right: 0;
