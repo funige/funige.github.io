@@ -151,7 +151,7 @@ ul, li {
   line-height: 36px;
   border: 0px solid black;
   border-bottom: 1px solid #aaa;
-  background-color: sepia;
+  background-color: lime;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -513,7 +513,7 @@ span .ui-icon {
 #save-indicator {
   position: absolute;
   left: 0px;
-  bottom: 12px;
+  bottom: 15px;
   z-index: 3000;
   opacity: 0.8;
 }
