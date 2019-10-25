@@ -233,7 +233,6 @@ ul, li {
 }
 
 .texts {
-  -webkit-transform-origin: top left;
   transform-origin: top left;
 }
 
@@ -246,7 +245,6 @@ ul, li {
   background: rgba(255, 255, 255, 0);
   z-index: 1000;
   color: #bf0058;
-  -webkit-transform-origin: top left;
   transform-origin: top left;
 }
 
@@ -282,7 +280,6 @@ textarea,
 
 .canvas {
   position: absolute;
-  -webkit-transform-origin: top left;
   transform-origin: top left;
   overflow: hidden;
 }
@@ -399,7 +396,7 @@ li.ui-state-disabled {
 }
 
 #file-dropdown .ui-menu {
-  width: 275px !important;
+  width: 200px !important;
 }
 
 span .ui-icon {
@@ -420,7 +417,7 @@ span .ui-icon {
 .ui-menu .ui-widget {
   border: 1px solid #aaa;
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.2);
-  width: 275px;
+  width: 200px;
 }
 
 .ui-menu-item-wrapper {
@@ -453,7 +450,6 @@ span .ui-icon {
   width: 100%;
   border: 1px solid #aaa;
   overflow: auto;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
@@ -513,7 +509,7 @@ span .ui-icon {
 #save-indicator {
   position: absolute;
   left: 0px;
-  bottom: 15px;
+  bottom: 5px;
   z-index: 3000;
   opacity: 0.8;
 }
@@ -641,7 +637,6 @@ span .ui-icon {
   height: 28px;
   border-radius: 14px;
   background: rgba(0, 0, 0, 0);
-  -webkit-transition: 0.5s;
   transition: 0.5s;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -882,7 +877,6 @@ form .preview {
   min-width: 100%;
   min-height: 100%;
   overflow: auto;
-  -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
@@ -891,7 +885,6 @@ form .preview {
   box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.3), 3px 3px 5px 2px rgba(0, 0, 0, 0.1);
   z-index: 0;
   background-color: white;
-  -webkit-transform-origin: top left;
   transform-origin: top left;
   overflow: hidden;
 }
@@ -910,7 +903,6 @@ form .preview {
 
 .main-view .page .marks {
   position: absolute;
-  -webkit-transform-origin: top left;
   transform-origin: top left;
 }
 
@@ -926,7 +918,6 @@ form .preview {
   height: 100%;
   position: absolute;
   overflow: scroll;
-  -webkit-transform: translateZ(0);
   transform: translateZ(0);
 }
 
@@ -991,6 +982,17 @@ form .preview {
   right: 0;
   bottom: 0;
   overflow: hidden;
+}
+
+.anchor {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  background-color: #aaa;
+}
+
+.main-view .text {
+  position: absolute;
 }
 
 /**
