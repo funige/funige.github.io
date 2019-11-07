@@ -648,7 +648,7 @@ span .ui-icon {
   height: 28px;
   border-radius: 14px;
   background: rgba(0, 0, 0, 0);
-  transition: 0.5s;
+  transition: 0;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -1027,6 +1027,7 @@ form .preview {
   display: table;
   table-layout: auto;
   min-width: 100%;
+  min-height: 30px;
   background-color: #f6f6f6;
 }
 
@@ -1080,6 +1081,10 @@ form .preview {
   width: 100vw;
   color: #000;
   padding: 5px 10px;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
 }
 
 .text-view .content > li > ul > li > div.dock-text.selected {
