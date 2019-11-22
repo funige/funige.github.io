@@ -241,7 +241,7 @@ ul, li {
   min-height: 1em;
   white-space: nowrap;
   cursor: default;
-  outline: 1px solid #eee;
+  outline: 1px solid rgba(0, 0, 0, 0.1);
   background: rgba(255, 255, 255, 0);
   z-index: 1000;
   color: #bf0058;
@@ -897,7 +897,6 @@ form .preview {
   z-index: 0;
   background-color: white;
   transform-origin: top left;
-  overflow: hidden;
 }
 
 .main-view .page.preload {
@@ -915,6 +914,12 @@ form .preview {
 .main-view .page .marks {
   position: absolute;
   transform-origin: top left;
+}
+
+.main-view .page .frame {
+  position: absolute;
+  transform-origin: top left;
+  overflow: hidden;
 }
 
 .main-view canvas.drawing-layer {
