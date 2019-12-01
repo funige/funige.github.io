@@ -961,6 +961,8 @@ form .preview {
   background-color: #eee;
   right: 0;
   overflow: hidden;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  z-index: 2;
 }
 
 .main-view .right-scroll-bar .slider {
@@ -982,6 +984,8 @@ form .preview {
   background-color: #eee;
   bottom: 0;
   overflow: hidden;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  z-index: 2;
 }
 
 .main-view .bottom-scroll-bar .slider {
@@ -998,6 +1002,7 @@ form .preview {
   right: 0;
   bottom: 0;
   overflow: hidden;
+  z-index: 2;
 }
 
 .anchor {
@@ -1009,10 +1014,6 @@ form .preview {
 
 .main-view .text {
   position: absolute;
-  -webkit-user-select: text;
-  -moz-user-select: text;
-  -ms-user-select: text;
-  user-select: text;
 }
 
 /**
